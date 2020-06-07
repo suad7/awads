@@ -20,3 +20,4 @@ Run the following command on the terminal:
 - Then activate the virtual with this command:
 
         . virtual/bin/activate
+### INSTALL DEPENDANCIES        
