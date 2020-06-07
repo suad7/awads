@@ -50,3 +50,8 @@ python3.6 manage.py migrate
 ### DEPLOYING (LIVE LINK)
 
 ### BEHAVIOR DRIVEN DEVELOPMENT (SPECIFICATIONS)
+| Input        | Output           | Behavior  |
+| ------------- |:-------------:| -----:|
+| Visit Awards site| Various projects are displayed  | User can review projects |
+| Click on image| Image details displayed | Image details displayed |
+| Visit profile | Projects posted by user are displayed | App gets projects for user |
