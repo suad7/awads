@@ -38,3 +38,4 @@ USER = '<Username>'
 PASSWORD = '<password>'
 DEBUG = True
 ```
+### RUN MIGRATIONS
