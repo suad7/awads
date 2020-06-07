@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+{{block.super}}
+    <div class="container-fluid">
+        <!--  -->
+        <div class="row">
+          {%for project in projects%}
+            <div class="col-lg-4 col-lg-4 col-lg-4 padding-0 hover ">
+              <a href="{%url 'project' project.id%}">
+                <img src="{{project.image_url.url}}" class=" img img-responsive img-thumbnail" style="height: 350px; width:450px; margin-bottom: 10px; padding: 10px;box-shadow: 5px 10px #888888;" data-toggle="modal" data-target="#{{image.id}}">
+              </a>
+              <p>{{ project.description }}</p>
+              <a href="{{ project.url }}" target='_blank'><button type="button" class="btn btn-default btn-rounded">View Site</button>
+</a>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}

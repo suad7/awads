@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+<style>
+    body {
+        background-image: url('/static/images/gram1.png');
+        background-size: 100%;
+    }
+</style>
+
+<body>
+    <div class="container top">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="font2">Search results for {{message |upper}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            {%if projects%} {% for project in projects %}
+
+
+            <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+                <div class="w3-row">
+
+                    <div class="w3-card w3-round w3-white">
+                        <div class="w3-container">
+                            <div class="w3-light-grey">
+                                <a href=""> <img src="{{project.image_url.url}}" class="img-responsive" style="height:250px;width:300px;" alt="Image"></a> <br>
+                                <ul class="list-inline home-text" style="padding-top:20px;">
+                                    <li class="list-inline-item"><i class="	fas fa-book-reader" data-toggle="modal" data-target="#myModal" style='font-size:36px'></i>
+
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <button class="w3-btn w3-white w3-border w3-border-grey w3-round-large"><a href="{%url 'project' project.id%}"> Open project</a></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %} {%else%}
+                <h4 style="padding-top:40px;" class="w3-center"> There are no results for you search term ...... <b>{{message | upper}}</b></h4>
+            </div>
+
+        </div>
+        {%endif%}
+        <div class="col-md-12 text-center">
+            <a></a>
+        </div>
+        {% endblock %}

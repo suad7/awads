@@ -1,0 +1,48 @@
+<style>
+    .container {
+        background: url("https://images.squarespace-cdn.com/content/v1/555c9d57e4b065271009ac3c/1513905802115-YUXBVGH6OSY5Q5C9J6BI/ke17ZwdGBToddI8pDm48kP9Invdr3s9hbtnv5vHbyzt7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UTG8VVHpRe-xI0OO_s6cEC9VLEx2PmUh6Z7HRdaNSVcy1BwhnUnKb_77tZJ4rR3HLQ/fantasy-2861107_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 100px;
+        border-radius: 50px;
+    }
+</style>
+{%extends "registration/base.html"%} {% load bootstrap3 %} {% block content %}
+<div class="container">
+    <div class="row">
+        <!-- Empty div -->
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            {% if form.errors %}
+            <p> Password or Username is incorrect </p>
+            {% endif %}
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <h3 class="text-center">Sign In</h3>
+                </div>
+                <div class="panel-body">
+
+                    <form action="/accounts/login/" method="post">
+                        {% csrf_token %} {% bootstrap_form form%}
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-sm" value="Login">
+                        </div>
+
+                        <input type="hidden" name="next" value="{{next}}">
+                        <p class="text-center">Don't have account ? <a href="/accounts/register/">Sign Up</a></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- empty div -->
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+{% endblock %}

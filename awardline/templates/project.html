@@ -1,0 +1,91 @@
+{% extends 'base.html'%} {% load bootstrap3 %} {%block content%}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    /* Create two equal columns that floats next to each other */
+    
+    .column {
+        float: left;
+        width: 50%;
+        padding: 50px;
+        height: 450px;
+    }
+    
+    .w3-btn {
+        margin-bottom: 10px;
+    }
+    /* Clear floats after the columns */
+    /* Style the buttons */
+    
+    .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        cursor: pointer;
+    }
+    
+    .container {
+        border-radius: 24%;
+    }
+</style>
+
+<body>
+
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+        <div class="w3-row">
+
+            <div class="w3-card w3-round w3-white">
+                <div class="w3-container">
+                    <div class="w3-light-grey">
+                        <a href=""> <img src="{{project.image_url.url}}" class="img-responsive" style="height:250px;width:300px;" alt="Image"></a> <br>
+                        <ul class="list-inline home-text" style="padding-top:20px;">
+                            <li class="list-inline-item"><i class="	fas fa-book-reader" data-toggle="modal" data-target="#myModal" style='font-size:36px'></i> {{ project.reviews.count }}
+                            </li>
+                            <li class="list-inline-item">
+                                <button class="w3-btn w3-white w3-border w3-border-grey w3-round-large"><a href="{{project.url}}"> Visit Site</a></button>
+                            </li>
+                        </ul>
+                        <h5 style="font-family: 'Gentium Basic', serif;"><b><a href="" >{{project.poster|upper}} :</a></b> {{project.description}} </h5>
+                        {% for review in latest_review_list.all %}
+                        <p style="font-family: 'Gentium Basic', serif; font-size: 17px;"><b>{{ review.user }} </b> wrote : {{ review.comment }}</p>
+                    </div>
+                    {% empty %}
+                    <p>No comments here yet </p>
+                    {% endfor %}
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <p style="font-size:15px;color:grey;  ;padding-left:10px;">{{project.date|timesince|upper}} AGO</p>
+            <div class="w3-container"> -->
+            <div class="w3-container" style="margin-top:55px; margin-left:30px">
+                <a href=""> </a>
+                <h4 class=""> Average Ratings for {{project.title |upper}}</h4>
+                <h6 style="font-family: 'Dosis',sans-serif;"> {{ project.average_design | floatformat }} Design rating</h6>
+                <h6 style="font-family: 'Dosis',sans-serif;"> {{ project.average_content | floatformat }} Content rating</h6>
+                <h6 style="font-family: 'Dosis',sans-serif;"> {{ project.average_usability | floatformat }} Usuability rating</h6>
+            </div>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-md" style="margin-top:45px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="w3-center"> Review & Rate Project</h3>
+                        </div>
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <form action="" method="POST">
+                                {% csrf_token %} {% bootstrap_form form%}
+                                <input type="submit" class="w3-btn w3-white w3-border w3-border-green w3-round-large" value="Comment">
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endblock%}
