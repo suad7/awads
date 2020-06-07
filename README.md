@@ -10,3 +10,4 @@ This is a website that allows for  it's users to sign up, login, and post projec
 3. Postgres
 4. virtual 
 ### CLONING & RUNNING
+Run the following command on the terminal:
