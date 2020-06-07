@@ -48,3 +48,5 @@ python3.6 manage.py migrate
 * Python3.6
 * Bootstrap 4
 ### DEPLOYING (LIVE LINK)
+
+### BEHAVIOR DRIVEN DEVELOPMENT (SPECIFICATIONS)
