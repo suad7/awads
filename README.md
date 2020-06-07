@@ -20,4 +20,8 @@ Run the following command on the terminal:
 - Then activate the virtual with this command:
 
         . virtual/bin/activate
-### INSTALL DEPENDANCIES        
+### INSTALL DEPENDANCIES     
+nstall the dependancies that will create an environment for the app to run with this command:
+
+     pip3 install -r requirements.txt
+
