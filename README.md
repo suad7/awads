@@ -13,4 +13,5 @@ This is a website that allows for  it's users to sign up, login, and post projec
 Run the following command on the terminal:
 
           git clone https://github.com/suad7/awads
-### CREATE VENV           
+### CREATE VENV    
+- To Create a virtual environment run the following command:       
