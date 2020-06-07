@@ -32,3 +32,9 @@ Run:
 ### .ENV FILE      
 Create .env file and paste paste the following filling where appropriate:  
 ```
+SECRET_KEY = '<Secret_key>'
+DBNAME = 'awads'
+USER = '<Username>'
+PASSWORD = '<password>'
+DEBUG = True
+```
