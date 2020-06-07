@@ -24,4 +24,6 @@ Run the following command on the terminal:
 nstall the dependancies that will create an environment for the app to run with this command:
 
      pip3 install -r requirements.txt
+### CREATE DATABASE
+Run:     
 
