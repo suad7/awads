@@ -30,4 +30,5 @@ Run:
      psql
      CREATE DATABASE <the name of your database>; 
 ### .ENV FILE      
-
+Create .env file and paste paste the following filling where appropriate:  
+```
