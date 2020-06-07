@@ -57,3 +57,4 @@ python3.6 manage.py migrate
 | Visit profile | Projects posted by user are displayed | App gets projects for user |
 ### CONTACT 
 sm.ha21@hotmail.com
+### LICENSE 
