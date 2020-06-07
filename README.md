@@ -12,6 +12,8 @@ This is a website that allows for  it's users to sign up, login, and post projec
 ### CLONING & RUNNING
 Run the following command on the terminal:
 
-          git clone https://github.com/suad7/awads
+       git clone https://github.com/suad7/awads
 ### CREATE VENV    
-- To Create a virtual environment run the following command:       
+- To Create a virtual environment run the following command:  
+
+        python3.6 -m venv <the name of your virtual>     
