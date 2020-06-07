@@ -39,3 +39,7 @@ PASSWORD = '<password>'
 DEBUG = True
 ```
 ### RUN MIGRATIONS
+```
+python3.6 manage.py makemigrations <the name of your App>
+python3.6 manage.py migrate
+```
