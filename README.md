@@ -25,5 +25,8 @@ nstall the dependancies that will create an environment for the app to run with 
 
      pip3 install -r requirements.txt
 ### CREATE DATABASE
-Run:     
+Run:  
+
+     psql
+     CREATE DATABASE <the name of your database>; 
 
