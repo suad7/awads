@@ -47,3 +47,4 @@ python3.6 manage.py migrate
 * Django
 * Python3.6
 * Bootstrap 4
+### DEPLOYING (LIVE LINK)
