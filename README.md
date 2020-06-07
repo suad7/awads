@@ -44,3 +44,6 @@ python3.6 manage.py makemigrations <the name of your App>
 python3.6 manage.py migrate
 ```
 ## TECHNOLOGIES USED
+* Django
+* Python3.6
+* Bootstrap 4
